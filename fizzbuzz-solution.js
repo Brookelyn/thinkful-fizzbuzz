@@ -3,7 +3,7 @@ $(document).ready(function() {
 	
 	function getUserInput() {
 		number = prompt('Please enter a number');
-		number = +"number";
+		number = +number;
 		if(canContinue()) {
 			fizzbuzz(number);
 		}
