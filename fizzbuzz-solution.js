@@ -3,9 +3,9 @@ $(document).ready(function() {
 	
 	function getUserInput() {
 		console.log(number);
-		number = prompt('Please enter a number');
-		console.log(number);
-		number = +number;
+		var nmbr = prompt('Please enter a number');
+		console.log(nmbr);
+		number = +nmbr;
 		console.log(number);
 		if(canContinue()) {
 			fizzbuzz(number);
@@ -18,15 +18,15 @@ $(document).ready(function() {
 	}
 
 	function canContinue() {
-		var bool = false;
-		if (typeof number == 'number') {
-			bool = true;
+		var bool = true;
+		if (typeof number != 'number') {
+			bool = false;
 		}
-		else if (number % 1 == 0) {
-			bool = true;
+		else if (number % 1 != 0) {
+			bool = false;
 		} 
-		else if (!isNaN(number)) {
-			bool = true;
+		else if (isNaN(number)) {
+			bool = false;
 		}
 		return bool;
 	}
@@ -34,7 +34,7 @@ $(document).ready(function() {
 	function fizzbuzz(number) {
 		var output = '';
 		console.log(number);
-		for (var i = 0; i <= number; i++) {
+		for (var i = 1; i <= number; i++) {
 			if ((i % 3 === 0) && (i % 5 === 0)) {
 				output = 'fizzbuzz';
 			}
