@@ -15,15 +15,15 @@ $(document).ready(function() {
 	}
 
 	function canContinue() {
-		var bool = true;
-		if (typeof number != 'number') {
-			bool = false;
+		var bool = false;
+		if (typeof number == 'number') {
+			bool = true;
 		}
-		else if (number % 1 != 0) {
-			bool = false;
+		else if (number % 1 == 0) {
+			bool = true;
 		} 
-		else if (isNaN(number)) {
-			bool = false;
+		else if (!isNaN(number)) {
+			bool = true;
 		}
 		return bool;
 	}
