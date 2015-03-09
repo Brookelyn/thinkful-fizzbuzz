@@ -2,8 +2,11 @@ $(document).ready(function() {
 	var number;
 	
 	function getUserInput() {
+		console.log(number);
 		number = prompt('Please enter a number');
+		console.log(number);
 		number = +number;
+		console.log(number);
 		if(canContinue()) {
 			fizzbuzz(number);
 		}
@@ -30,6 +33,7 @@ $(document).ready(function() {
 
 	function fizzbuzz(number) {
 		var output = '';
+		console.log(number);
 		for (var i = 0; i <= number; i++) {
 			if ((i % 3 === 0) && (i % 5 === 0)) {
 				output = 'fizzbuzz';
