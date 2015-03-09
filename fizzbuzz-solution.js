@@ -6,7 +6,7 @@ $(document).ready(function() {
 		number = +"number";
 		if(canContinue()) {
 			fizzbuzz(number);
-		};
+		}
 
 		else {
 			alert("Oops, that's not a number! Please try again.");
